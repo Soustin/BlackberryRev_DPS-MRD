@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Mousemove Effect | Change Background Position On Mousemove</title>
+    <link rel="stylesheet" href="parallax.css">
+  </head>
+  <body>
+  <!-- <body bgcolor="./parallaximgs/iphone_12-removebg-preview.png"> -->
+    <div class="circle"></div>
+
+    <div class="container">
+      <h2 class="object" data-value="3">Blackberry<br></h2>
+      <a href="./OURPROD-PH.html" class="object" data-value="3">Enter></a>
+      <img src="./Handheld-removebg-preview.png" class="object" style="scale: 0.8; margin-left: 80vh;" data-value="-2" alt="">
+      <img src="./img/BB-STEM1-NEW.png" class="object" style="scale: 0.4; margin-left: -100vh;" data-value="-2" alt="">
+      <!-- <img src="./Berry OS FINAL.png" class="object" style="scale: 0.4; margin-left: -10vh;" data-value="4" alt=""> -->
+      <!-- <img src="./Berry OS Icon.png" class="object" data-value="-6" alt=""> -->
+      <!-- <img src="./" class="object" data-value="8" alt="">
+      <img src="./parallaximgs/6.png" class="object" data-value="-4" alt="">
+      <img src="./parallaximgs/7.png" class="object" data-value="5" alt="">
+      <img src="./parallaximgs/8.png" class="object" data-value="-9" alt="">
+      <img src="./parallaximgs/9.png" class="object" data-value="-5" alt=""> -->
+      <!-- <img src="./parallaximgs/iphone_12-removebg-preview.png" class="upper" data-value="-5" alt=""> -->
+    </div>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+
+  </body>
+</html>

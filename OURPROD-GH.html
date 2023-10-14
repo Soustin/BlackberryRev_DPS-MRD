@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Website</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="responsive.css">
+        <!-- <link rel="stylesheet" href="reset.css"> buat reset css -->
+        <link rel="shortcut icon" type="image/jpg" href="./blackberry2.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous">
+        <link rel="javascript" href="index.js">
+        <!-- <link rel="javascript" href="cardseffect.js"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <!-- <meta name="description" content=""> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./starbucks3.css">
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <!-- header -->
+            <header>
+                <div>
+                    <a href="#" class="logo"><img src="./blackberry2.png" style="scale: 0.1;"></a>
+                </div>
+                <nav class="navbar">
+                <ul>
+                    <li><a href="./OURPROD-GH.html" class="active">Home</a></li>
+                    <li><a href="./omega.html">Omega Viz</a></li>
+                    <li><a href="./apex.html">Apex Pixel</a></li>
+                    <li><a href="./cards.html">Cards</a></li>
+                    <li><a href="./login.html" class="btn" target="_blank">Log in</a></li>
+                </ul>
+                </nav>
+                
+                <!-- <div class="fas fa-bars" id="menu-btn" cursorhover="true"></div> -->
+    
+            </header>
+            <!-- header -->
+        
+            <!-- <header>
+                <a href="#" class="logo"><img src="./blackberry2.png" style="scale: 0.1;"></a>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#">What's New</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </header> -->
+            <div class="content">
+                <div class="textBox">
+                    <h2><span class="heading">BB Apex Pixel</span></h2>
+                    <h2><span class="tagline">Rise</span>, <span class="tagline">Reinvent</span>, <span class="tagline">Reform</span>.</h2>
+                    <p>A Handheld Console. The Blackberry Apex Pixel is the newest installment in the Handheld Gaming Technology, incorporated with an 8K Display, a powerful processor, and a powerful Windows 11 UI providing an unlimited Game Library for the best experience at a cheaper rate. Experience the New Realm of Gaming!</p>
+                    <a href="./apex.html">Learn More</a>
+                </div>
+                <div class="imgBox">
+                    <img src="./HandheldModel.png" class="product object" data-value="4" >
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><a href="./OURPROD-PH.html"><img src="./img/BB-STEM1-NEW.png"></a></li>
+                <li><a href="./OURPROD-GH.html"><img src="./HandheldModel.png"></a></li>
+                <li><a href="./OURPROD-HP.html"><img src="./headphone-removebg-preview.png"></a></li>
+            </ul>
+        </section>
+
+        <!-- <script src="" async defer></script> -->
+        <script type="text/javascript">
+            document.addEventListener("mousemove", parallax);
+            function parallax(e){
+              document.querySelectorAll(".object").forEach(function(move){
+        
+                var moving_value = move.getAttribute("data-value");
+                var x = (e.clientX * moving_value) / 250;
+                var y = (e.clientY * moving_value) / 250;
+        
+                move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+              });
+            }
+            </script>
+    </body>
+</html>
